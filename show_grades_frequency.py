@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the results CSV file
-results_file = "result.csv"
+results_file = "outputs/result.csv"
 result_df = pd.read_csv(results_file)
 
 # Create a histogram for grade frequency

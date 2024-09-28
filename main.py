@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 
 # File paths
-grades_file = "grades.csv"
-weights_file = "weights.csv"
-current_results_file = 'result.csv'
-improved_results_file = 'improved_result.csv'
+grades_file = "data/grades.csv"
+weights_file = "data/weights.csv"
+current_results_file = 'outputs/result.csv'
+improved_results_file = 'outputs/improved_result.csv'
 
 # Load both files into DataFrames
 basic_grades_df = pd.read_csv(grades_file, dtype=str).fillna('')
