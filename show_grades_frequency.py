@@ -14,7 +14,7 @@ plt.ylabel("Frequency")
 plt.grid(axis='y')
 
 # Save the plot as an image
-plt.savefig("grade_frequency.png")
+plt.savefig("visualizations/grade_frequency.png")
 
 # Show the plot
 plt.show()
