@@ -1,9 +1,19 @@
 import pandas as pd
 import numpy as np
+import argparse
+
 
 # File paths
-grades_file = "data/grades.csv"
-weights_file = "data/weights.csv"
+parser = argparse.ArgumentParser(description='Process grades and weights.')
+parser.add_argument('--grades', type=str, default='data/grades.csv', help='Path to the grades CSV file')
+parser.add_argument('--weights', type=str, default='data/weights.csv', help='Path to the weights CSV file')
+
+# Parse the arguments
+args = parser.parse_args()
+
+# File paths from command-line arguments or defaults
+grades_file = args.grades
+weights_file = args.weights
 current_results_file = 'outputs/result.csv'
 improved_results_file = 'outputs/improved_result.csv'
 
@@ -43,7 +53,8 @@ def get_current_average(grades_df: pd.DataFrame, weights_df: pd.DataFrame, debug
         raise ValueError("The columns in the grades and weights files do not match.")
 
 
-def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, current_avg: float, result_count: int = 3) -> pd.DataFrame:
+def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, current_avg: float,
+                             result_count: int = 3) -> pd.DataFrame:
     grades_df_usage = grades_df.copy()
     weights_df_usage = weights_df.copy()
     grade_improvement_options = []
@@ -79,10 +90,14 @@ def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, 
     return top_3_improvements
 
 
-if __name__ == '__main__':
+def main():
     current_result_df, result_avg = get_current_average(basic_grades_df, basic_weights_df, True)
     improvement = get_improvements_options(basic_grades_df, basic_weights_df, result_avg, 5)
     for improvement_index, improvement_row in improvement.iterrows():
         print(f"If you score {improvement_row['new_grade_needed']} ({improvement_row['increase']} more)"
               f"\n in {improvement_row['course']}"
               f"\n The Average will increase by: {improvement_row['new_average'] - result_avg}\n")
+
+
+if __name__ == '__main__':
+    main()
