@@ -3,7 +3,8 @@ import pandas as pd
 # File paths
 grades_file = "grades.csv"
 weights_file = "weights.csv"
-results_file = 'result.csv'
+current_results_file = 'result.csv'
+improved_results_file = 'improved_result.csv'
 
 # Load both files into DataFrames
 basic_grades_df = pd.read_csv(grades_file, dtype=str).fillna('')
@@ -30,18 +31,18 @@ def get_current_average(grades_df: pd.DataFrame, weights_df: pd.DataFrame, debug
         })
         filtered_grades = result_df[result_df["grade"] > 59]
 
-        filtered_grades.to_csv(results_file, index=False)
+        filtered_grades.to_csv(current_results_file, index=False)
 
         average_filtered_grade = filtered_grades["grade"].mean()
-        print("Your Average is: {}".format(average_filtered_grade))
         if debug:
+            print("Your Average is: {}".format(average_filtered_grade))
             print(filtered_grades)
         return filtered_grades, average_filtered_grade
     else:
         raise ValueError("The columns in the grades and weights files do not match.")
 
 
-def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, current_avg: float) -> pd.DataFrame:
+def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, current_avg: float, result_count: int = 3) -> pd.DataFrame:
     grades_df_usage = grades_df.copy()
     weights_df_usage = weights_df.copy()
     grade_improvement_options = []
@@ -49,31 +50,37 @@ def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, 
     # print(current_df_usage)
     for index, row in grades_df_usage.iterrows():
         course_name = row['course']
+        for increase in [10.0, 15.0, 20.0, 25.0]:
+            # Check only the 'exam' column
+            if pd.notna(row['exam']) and row['exam'].isdigit():
+                if float(increase) + float(row['exam']) < 101.0:
+                    print(f"increase: {increase}, grade: {row['exam']} new grade: {float(row['exam']) + increase}")
+                    # backup current and see possible adjust
+                    backup_grades = grades_df_usage.loc[index, :].copy()
+                    adjusted_grades = grades_df_usage.loc[index, :]
+                    adjusted_grades['exam'] = float(row['exam']) + increase
+                    _, new_average = get_current_average(grades_df_usage, weights_df_usage)
 
-        # Check only the 'exam' column
-        if pd.notna(row['exam']) and row['exam'].isdigit():
-            # backup current and see possible adjust
-            backup_grades = grades_df_usage.loc[index, :].copy()
-            adjusted_grades = grades_df_usage.loc[index, :]
-            adjusted_grades['exam'] = float(row['exam']) + 10
-            _, new_average = get_current_average(grades_df_usage, weights_df_usage)
-
-            # Capture only improvements
-            if new_average > current_avg:
-                grade_improvement_options.append({
-                    'course': course_name,
-                    'new_grade_needed': float(row['exam']) + 10,
-                    'new_average': new_average
-                })
-            grades_df_usage.loc[index, :] = backup_grades
+                    # Capture only improvements
+                    if new_average > current_avg:
+                        grade_improvement_options.append({
+                            'course': course_name,
+                            'new_grade_needed': float(row['exam']),
+                            'new_average': new_average,
+                            'increase': increase
+                        })
+                    grades_df_usage.loc[index, :] = backup_grades
 
     # Convert to DataFrame and find the top 3 options
     improvement_df = pd.DataFrame(grade_improvement_options)
-    top_3_improvements = improvement_df.sort_values(by='new_average', ascending=False).head(3)
+    improvement_df = improvement_df.sort_values(by='new_average', ascending=False)
+    improvement_df.to_csv(improved_results_file)
+    top_3_improvements = improvement_df.head(result_count)
     return top_3_improvements
 
 
 if __name__ == '__main__':
     current_result_df, result_avg = get_current_average(basic_grades_df, basic_weights_df, True)
-    print(get_improvements_options(basic_grades_df, basic_weights_df, result_avg))
+    improvement = get_improvements_options(basic_grades_df, basic_weights_df, result_avg, 5)
+    print(improvement)
 
