@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # File paths
 grades_file = "grades.csv"
@@ -17,16 +18,16 @@ def get_current_average(grades_df: pd.DataFrame, weights_df: pd.DataFrame, debug
     # Ensure both dataframes have consistent column order
     if set(cgrades_df.columns) == set(cweights_df.columns):
         # Convert to numerical values for calculation, replacing empty strings with zero
-        grades_numeric = cgrades_df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce').fillna(0)
-        weights_numeric = cweights_df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce').fillna(0)
+        grades_numeric = cgrades_df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce').fillna(0).to_numpy()
+        weights_numeric = cweights_df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce').fillna(0).to_numpy()
 
         # Calculate the product rounded as specified
-        total_grades = ((grades_numeric * weights_numeric) / 100).sum(axis=1).round()
+        total_grades = np.round((grades_numeric * weights_numeric / 100).sum(axis=1))
 
         # Insert course names back
         result_df = pd.DataFrame({
-            "course_number": range(1, len(total_grades) + 1),
-            "course_name": cgrades_df["course"],
+            "course_number":  np.arange(1, len(total_grades) + 1),
+            "course_name": cgrades_df["course"].values,
             "grade": total_grades
         })
         filtered_grades = result_df[result_df["grade"] > 59]
@@ -35,7 +36,7 @@ def get_current_average(grades_df: pd.DataFrame, weights_df: pd.DataFrame, debug
 
         average_filtered_grade = filtered_grades["grade"].mean()
         if debug:
-            print("Your Average is: {}".format(average_filtered_grade))
+            print("Optimized Average is: {:.2f}".format(average_filtered_grade))
             print(filtered_grades)
         return filtered_grades, average_filtered_grade
     else:
