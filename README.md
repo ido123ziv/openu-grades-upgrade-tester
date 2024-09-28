@@ -2,12 +2,17 @@
 This is a simple `pandas` project in python to determine how I can increase my BSc
 Average by retaking an exam, We are entitled of re-taking 3 exams without retaking the course.
 
+Ever wondered which courses are the most valuable to your average?
+
+![results](visualizations/top_10_grades.png?raw=true)
+
 The logic is to create a product between assignments weights and my grades, 
 then looping on the result dataframe to see which impact can be made.
 
 All the data is from the OpenU website, you can clone and try on your own.
 
 Output:
+
 ```console
 If you score 87.0 (25.0 more)
  in Linear Algebra 2
