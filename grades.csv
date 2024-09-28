@@ -1,25 +1,25 @@
-﻿course,mmh1,mmh2,mmh3,mmh4,mmh5,mmn1,mmn2,mmn3,mmn4,mmn5,mmn6,mmn7,exam,exam 2
-Discreet Mathematics,96,100,95,95,100,97,92,80,100,99,95,,89,
-Calculus 1,100,100,100,100,,95,97,96,96,100,100,97,63,
-Linear Algebra 1,100,100,100,,,88,100,88,96,98,100,,76,
-Calculus 2,85,100,,,,,,,94,100,80,,27,76
-Digital Design,,,,,,84,100,90,100,85,,,73,
-Introduction to Computer Science,95,90,100,,,100,88,80,100,100,,,67,76
-Computer Organizations,,,,,,88,74,83,95,100,,,89,
-Linear Algebra 2,100,93,,,,,,100,100,,,,62,
-Probability,100,95,,,,100,98,97,100,100,,,100,
-Database Systems,,,,,,85,78,77,81,94,,,85,
-Logic,,,,,,96,85,85,90,100,,,75,
-Data Structures and Algorithms,,,,,,98,93,100,,100,,,80,
-System Programming Laboratory,,,,,,100,100,,,94,,,86,
-Operating Systems,,,,,,100,100,100,,,,,70,
-Algorithms,,,,,,75,100,97,100,,,,44,
-Automata Theory and Formal Languages,,,,,,100,,100,98,97,,,83,
-Advanced Programming in Java,,,,,,91,90,95,85,80,,,75,
-Essentials of Programming Languages,,,,,,100,100,100,100,100,,,35,
-Object Oriented Programming,,,,,,95,95,95,,,,,90,
-Introduction to Cyber Security,,,,,,,,,,,80,,70,
-Principles of Information Systems Development,,,,,,72,90,93,0,67,,,85,
-Introduction to the Theory of Computations and Complexity,,,,,,100,,91,100,,,,43,66
-Introduction to Computer Networks,100,100,90,,,,,,,,,,84,
-Introduction to Mathematics,,,,,,85,98,100,,,,,.,
+﻿course,mmh1,mmh2,mmh3,mmh4,mmh5,mmn1,mmn2,mmn3,mmn4,mmn5,mmn6,mmn7,exam
+Discreet Mathematics,96,100,95,95,100,97,92,80,100,99,95,,89
+Calculus 1,100,100,100,100,,95,97,96,96,100,100,97,63
+Linear Algebra 1,100,100,100,,,88,100,88,96,98,100,,76
+Calculus 2,85,100,,,,,,,94,100,80,,76
+Digital Design,,,,,,84,100,90,100,85,,,73
+Introduction to Computer Science,95,90,100,,,100,88,80,100,100,,,76
+Computer Organizations,,,,,,88,74,83,95,100,,,89
+Linear Algebra 2,100,93,,,,,,100,100,,,,62
+Probability,100,95,,,,100,98,97,100,100,,,100
+Database Systems,,,,,,85,78,77,81,94,,,85
+Logic,,,,,,96,85,85,90,100,,,75
+Data Structures and Algorithms,,,,,,98,93,100,,100,,,80
+System Programming Laboratory,,,,,,100,100,,,94,,,86
+Operating Systems,,,,,,100,100,100,,,,,70
+Algorithms,,,,,,75,100,97,100,,,,44
+Automata Theory and Formal Languages,,,,,,100,,100,98,97,,,83
+Advanced Programming in Java,,,,,,91,90,95,85,80,,,75
+Essentials of Programming Languages,,,,,,100,100,100,100,100,,,35
+Object Oriented Programming,,,,,,95,95,95,,,,,90
+Introduction to Cyber Security,,,,,,,,,,,80,,70
+Principles of Information Systems Development,,,,,,72,90,93,0,67,,,85
+Introduction to the Theory of Computations and Complexity,,,,,,100,,91,100,,,,66
+Introduction to Computer Networks,100,100,90,,,,,,,,,,84
+Introduction to Mathematics,,,,,,85,98,100,,,,,.
