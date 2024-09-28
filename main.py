@@ -26,7 +26,7 @@ def get_current_average(grades_df: pd.DataFrame, weights_df: pd.DataFrame, debug
 
         # Insert course names back
         result_df = pd.DataFrame({
-            "course_number":  np.arange(1, len(total_grades) + 1),
+            "course_number": np.arange(1, len(total_grades) + 1),
             "course_name": cgrades_df["course"].values,
             "grade": total_grades
         })
@@ -86,5 +86,3 @@ if __name__ == '__main__':
         print(f"If you score {improvement_row['new_grade_needed']} ({improvement_row['increase']} more)"
               f"\n in {improvement_row['course']}"
               f"\n The Average will increase by: {improvement_row['new_average'] - result_avg}\n")
-
-
