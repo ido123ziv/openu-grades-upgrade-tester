@@ -1,38 +1,57 @@
 ,course,new_grade_needed,new_average,increase
-15,Linear Algebra 2,92.0,83.38095238095238,30.0
-35,Introduction to the Theory of Computations and Complexity,96.0,83.33333333333333,30.0
-31,Introduction to Cyber Security,100.0,83.23809523809524,30.0
-3,Calculus 1,93.0,83.14285714285714,30.0
-24,Operating Systems,100.0,83.04761904761905,30.0
-7,Calculus 2,96.0,83.0,20.0
-34,Introduction to the Theory of Computations and Complexity,86.0,82.95238095238095,20.0
-14,Linear Algebra 2,82.0,82.95238095238095,20.0
-20,Data Structures and Algorithms,100.0,82.9047619047619,20.0
-27,Advanced Programming in Java,95.0,82.9047619047619,20.0
-30,Introduction to Cyber Security,90.0,82.9047619047619,20.0
-18,Logic,95.0,82.9047619047619,20.0
-11,Introduction to Computer Science,96.0,82.85714285714286,20.0
-9,Digital Design,93.0,82.85714285714286,20.0
-5,Linear Algebra 1,96.0,82.80952380952381,20.0
-2,Calculus 1,83.0,82.80952380952381,20.0
-23,Operating Systems,90.0,82.76190476190476,20.0
-13,Linear Algebra 2,72.0,82.57142857142857,10.0
-33,Introduction to the Theory of Computations and Complexity,76.0,82.57142857142857,10.0
-6,Calculus 2,86.0,82.57142857142857,10.0
-25,Automata Theory and Formal Languages,93.0,82.57142857142857,10.0
-29,Introduction to Cyber Security,80.0,82.52380952380952,10.0
-28,Object Oriented Programming,100.0,82.52380952380952,10.0
-26,Advanced Programming in Java,85.0,82.52380952380952,10.0
-36,Introduction to Computer Networks,94.0,82.52380952380952,10.0
-19,Data Structures and Algorithms,90.0,82.52380952380952,10.0
-17,Logic,85.0,82.52380952380952,10.0
-16,Database Systems,95.0,82.52380952380952,10.0
-12,Computer Organizations,99.0,82.52380952380952,10.0
-10,Introduction to Computer Science,86.0,82.52380952380952,10.0
+22,Linear Algebra 2,87.0,83.19047619047619,25.0
+53,Introduction to the Theory of Computations and Complexity,91.0,83.14285714285714,25.0
+28,Logic,100.0,83.0952380952381,25.0
+42,Advanced Programming in Java,100.0,83.0952380952381,25.0
+47,Introduction to Cyber Security,95.0,83.04761904761905,25.0
+4,Calculus 1,88.0,83.0,25.0
+10,Calculus 2,96.0,83.0,20.0
+14,Digital Design,98.0,83.0,25.0
+52,Introduction to the Theory of Computations and Complexity,86.0,82.95238095238095,20.0
+21,Linear Algebra 2,82.0,82.95238095238095,20.0
+46,Introduction to Cyber Security,90.0,82.9047619047619,20.0
+41,Advanced Programming in Java,95.0,82.9047619047619,20.0
+36,Operating Systems,95.0,82.9047619047619,25.0
+31,Data Structures and Algorithms,100.0,82.9047619047619,20.0
+27,Logic,95.0,82.9047619047619,20.0
+17,Introduction to Computer Science,96.0,82.85714285714286,20.0
+13,Digital Design,93.0,82.85714285714286,20.0
+3,Calculus 1,83.0,82.80952380952381,20.0
+7,Linear Algebra 1,96.0,82.80952380952381,20.0
+38,Automata Theory and Formal Languages,98.0,82.80952380952381,15.0
+51,Introduction to the Theory of Computations and Complexity,81.0,82.76190476190476,15.0
+35,Operating Systems,90.0,82.76190476190476,20.0
+55,Introduction to Computer Networks,99.0,82.76190476190476,15.0
+20,Linear Algebra 2,77.0,82.76190476190476,15.0
+9,Calculus 2,91.0,82.76190476190476,15.0
+45,Introduction to Cyber Security,85.0,82.71428571428571,15.0
+16,Introduction to Computer Science,91.0,82.71428571428571,15.0
+26,Logic,90.0,82.71428571428571,15.0
+30,Data Structures and Algorithms,95.0,82.71428571428571,15.0
+40,Advanced Programming in Java,90.0,82.71428571428571,15.0
+24,Database Systems,100.0,82.71428571428571,15.0
+12,Digital Design,88.0,82.66666666666667,15.0
+2,Calculus 1,78.0,82.66666666666667,15.0
+6,Linear Algebra 1,91.0,82.61904761904762,15.0
+37,Automata Theory and Formal Languages,93.0,82.57142857142857,10.0
+49,Principles of Information Systems Development,100.0,82.57142857142857,15.0
+8,Calculus 2,86.0,82.57142857142857,10.0
+34,Operating Systems,85.0,82.57142857142857,15.0
+50,Introduction to the Theory of Computations and Complexity,76.0,82.57142857142857,10.0
+19,Linear Algebra 2,72.0,82.57142857142857,10.0
+44,Introduction to Cyber Security,80.0,82.52380952380952,10.0
+54,Introduction to Computer Networks,94.0,82.52380952380952,10.0
+23,Database Systems,95.0,82.52380952380952,10.0
+39,Advanced Programming in Java,85.0,82.52380952380952,10.0
+43,Object Oriented Programming,100.0,82.52380952380952,10.0
+15,Introduction to Computer Science,86.0,82.52380952380952,10.0
+18,Computer Organizations,99.0,82.52380952380952,10.0
+29,Data Structures and Algorithms,90.0,82.52380952380952,10.0
+25,Logic,85.0,82.52380952380952,10.0
+11,Digital Design,83.0,82.47619047619048,10.0
+5,Linear Algebra 1,86.0,82.47619047619048,10.0
 1,Calculus 1,73.0,82.47619047619048,10.0
-8,Digital Design,83.0,82.47619047619048,10.0
-4,Linear Algebra 1,86.0,82.47619047619048,10.0
 0,Discreet Mathematics,99.0,82.47619047619048,10.0
-22,Operating Systems,80.0,82.42857142857143,10.0
-32,Principles of Information Systems Development,95.0,82.42857142857143,10.0
-21,System Programming Laboratory,96.0,82.28571428571429,10.0
+48,Principles of Information Systems Development,95.0,82.42857142857143,10.0
+33,Operating Systems,80.0,82.42857142857143,10.0
+32,System Programming Laboratory,96.0,82.28571428571429,10.0

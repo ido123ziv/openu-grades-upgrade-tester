@@ -54,7 +54,6 @@ def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, 
             # Check only the 'exam' column
             if pd.notna(row['exam']) and row['exam'].isdigit():
                 if float(increase) + float(row['exam']) < 101.0:
-                    print(f"increase: {increase}, grade: {row['exam']} new grade: {float(row['exam']) + increase}")
                     # backup current and see possible adjust
                     backup_grades = grades_df_usage.loc[index, :].copy()
                     adjusted_grades = grades_df_usage.loc[index, :]
@@ -82,5 +81,9 @@ def get_improvements_options(grades_df: pd.DataFrame, weights_df: pd.DataFrame, 
 if __name__ == '__main__':
     current_result_df, result_avg = get_current_average(basic_grades_df, basic_weights_df, True)
     improvement = get_improvements_options(basic_grades_df, basic_weights_df, result_avg, 5)
-    print(improvement)
+    for improvement_index, improvement_row in improvement.iterrows():
+        print(f"If you score {improvement_row['new_grade_needed']} ({improvement_row['increase']} more)"
+              f"\n in {improvement_row['course']}"
+              f"\n The Average will increase by: {improvement_row['new_average'] - result_avg}\n")
+
 
