@@ -1,4 +1,4 @@
-course number,course name,grade
+course_number,course_name,grade
 1,Discreet Mathematics,91.0
 2,Calculus 1,73.0
 3,Linear Algebra 1,82.0
@@ -19,4 +19,4 @@ course number,course name,grade
 20,Introduction to Cyber Security,72.0
 21,Principles of Information Systems Development,84.0
 22,Introduction to the Theory of Computations and Complexity,71.0
-23,Introduction to Computer Networks,86.0
+23,Introduction to Computer Networks,94.0
