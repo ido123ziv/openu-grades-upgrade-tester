@@ -1,25 +1,22 @@
-,course number,course name,grade
-0,1,Discreet Mathematics,91.0
-1,2,Calculus 1,73.0
-2,3,Linear Algebra 1,82.0
-3,4,Calculus 2,78.0
-4,5,Digital Design,78.0
-5,6,Introduction to Computer Science,80.0
-6,7,Computer Organizations,90.0
-7,8,Linear Algebra 2,67.0
-8,9,Probability,100.0
-9,10,Database Systems,85.0
-10,11,Logic,78.0
-11,12,Data Structures and Algorithms,84.0
-12,13,System Programming Laboratory,92.0
-13,14,Operating Systems,81.0
-14,15,Algorithms,48.0
-15,16,Automata Theory and Formal Languages,84.0
-16,17,Advanced Programming in Java,78.0
-17,18,Essentials of Programming Languages,50.0
-18,19,Object Oriented Programming,91.0
-19,20,Introduction to Cyber Security,72.0
-20,21,Principles of Information Systems Development,84.0
-21,22,Introduction to the Theory of Computations and Complexity,71.0
-22,23,Introduction to Computer Networks,86.0
-23,24,Introduction to Mathematics,10.0
+course number,course name,grade
+1,Discreet Mathematics,91.0
+2,Calculus 1,73.0
+3,Linear Algebra 1,82.0
+4,Calculus 2,78.0
+5,Digital Design,78.0
+6,Introduction to Computer Science,80.0
+7,Computer Organizations,90.0
+8,Linear Algebra 2,67.0
+9,Probability,100.0
+10,Database Systems,85.0
+11,Logic,78.0
+12,Data Structures and Algorithms,84.0
+13,System Programming Laboratory,92.0
+14,Operating Systems,81.0
+16,Automata Theory and Formal Languages,84.0
+17,Advanced Programming in Java,78.0
+19,Object Oriented Programming,91.0
+20,Introduction to Cyber Security,72.0
+21,Principles of Information Systems Development,84.0
+22,Introduction to the Theory of Computations and Complexity,71.0
+23,Introduction to Computer Networks,86.0

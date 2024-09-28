@@ -1,4 +1,3 @@
-# Import necessary library
 import pandas as pd
 
 # File paths
@@ -26,7 +25,8 @@ if set(grades_df.columns) == set(weights_df.columns):
         "grade": total_grades
     })
     filtered_grades = result_df[result_df["grade"] > 59]
-    result_df.to_csv(results_file)
+
+    filtered_grades.to_csv(results_file, index=False)
 
     average_filtered_grade = filtered_grades["grade"].mean()
     print("Your Average is: {}".format(average_filtered_grade))
