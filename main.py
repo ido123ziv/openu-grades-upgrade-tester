@@ -2,8 +2,9 @@
 import pandas as pd
 
 # File paths
-grades_file = "/mnt/data/grades.csv"
-weights_file = "/mnt/data/weights.csv"
+grades_file = "grades.csv"
+weights_file = "weights.csv"
+results_file = 'result.csv'
 
 # Load both files into DataFrames
 grades_df = pd.read_csv(grades_file, dtype=str).fillna('')
@@ -16,14 +17,19 @@ if set(grades_df.columns) == set(weights_df.columns):
     weights_numeric = weights_df.iloc[:, 1:].apply(pd.to_numeric, errors='coerce').fillna(0)
 
     # Calculate the product rounded as specified
-    weighted_products = ((grades_numeric * weights_numeric) / 100).round()
+    total_grades = ((grades_numeric * weights_numeric) / 100).sum(axis=1).round()
 
     # Insert course names back
-    weighted_products.insert(0, "course", grades_df["course"])
+    result_df = pd.DataFrame({
+        "course number": range(1, len(total_grades) + 1),
+        "course name": grades_df["course"],
+        "grade": total_grades
+    })
+    filtered_grades = result_df[result_df["grade"] > 59]
+    result_df.to_csv(results_file)
 
-    # Display the calculated products
-    import ace_tools as tools;
-
-    tools.display_dataframe_to_user("Calculated Weighted Products", weighted_products)
+    average_filtered_grade = filtered_grades["grade"].mean()
+    print("Your Average is: {}".format(average_filtered_grade))
 else:
     raise ValueError("The columns in the grades and weights files do not match.")
+
